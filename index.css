@@ -1,0 +1,449 @@
+:root {
+    --cor-primaria: #FFFFFF;
+    --cor-secundaria: #3FC2CF;
+    --cor-terciaria: #646464;
+    --cor-texto-primaria: #000000;
+    --cor-texto-secundaria: #888888;
+    --cor-botao-assinatura: #EC3923;
+    --fonte-conteudo: 'Lora', Georgia, serif;
+    --fonte-interface: 'Montserrat', Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--fonte-conteudo);
+    background-color: var(--cor-primaria);
+}
+
+section {
+    padding: 1.5rem 0;
+}
+
+.container {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav {
+    background-color: var(--cor-primaria);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav .container {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding: 1rem 1rem;
+}
+
+.navbar-logo img {
+    width: auto;
+    height: 2rem;
+}
+
+.icone-nav {
+    width: 1.5rem;
+    height: 1.5rem;
+    object-fit: contain;
+}
+
+.nav-com-icone {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.botao-assinatura {
+    background-color: var(--cor-botao-assinatura);
+    color: var(--cor-primaria);
+    font-family: var(--fonte-interface);
+    font-weight: 700;
+    font-size: 0.7rem;
+    padding: 0.5rem 0.5rem;
+    border-radius: 1.5rem;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-family: var(--fonte-interface);
+    font-weight: 700;
+    color: var(--cor-secundaria);
+    font-size: 0.7rem;
+    line-height: 1;
+}
+
+.navbar-esquerda {
+    justify-self: start;
+}
+
+.navbar-direita {
+    justify-self: end;
+}
+
+.destaques .container {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 2rem;
+}
+
+.destaques {
+    padding-top: 2.25rem;
+}
+
+.destaques-direita {
+    align-self: center;
+}
+
+.chamada-assinatura {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--fonte-interface);
+    font-size: 0.9rem;
+    border: 2px solid var(--cor-secundaria);
+    border-radius: 1.5rem;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.chamada-assinatura a {
+    text-align: center;
+    color: var(--cor-secundaria);
+    text-decoration: none;
+}
+
+.chamada-assinatura p {
+    color: var(--cor-terciaria);
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.card-noticia > img {
+    margin-bottom: 0.6rem;
+}
+
+.card-noticia.principal > img {
+    width: 100%;
+    aspect-ratio: 16/10;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.card-noticia.destaque > img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    object-position: center top;
+    margin: 0;
+}
+
+.card-noticia.padrao > img {
+    width: 100%;
+    aspect-ratio: 16/10;
+    object-fit: cover;
+}
+
+.card-noticia.padrao.com-divisoria {
+    padding-bottom: 1rem;
+}
+
+.card-noticia.destaque {
+    margin-bottom: 1rem;
+}
+
+card-noticia.destaque .titulo-grande {
+    padding-left: 0;
+}
+
+.conteudo-noticia {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.conteudo-noticia > img {
+    width: 110px;
+    aspect-ratio: 16/10;
+    object-fit: cover;
+    object-position: center center;
+    flex-shrink: 0;
+}
+
+.conteudo-noticia h3 {
+    position: relative;
+    padding-left: 1rem;
+    align-self: flex-start;
+}
+
+.conteudo-noticia h3::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0.5rem;
+    height: 100%;
+    background-color: var(--cor-secundaria);
+    border-radius: 1rem;
+}
+
+.lista-noticias .card-noticia {
+    padding: 0.5rem 0;
+}
+
+.card-noticia.com-divisoria {
+    border-bottom: 1px solid var(--cor-texto-primaria);
+}
+
+.destaques-esquerda .card-noticia.com-divisoria {
+    padding-bottom: 0.75rem;
+}
+
+.card-noticia.horizontal .categoria-noticia {
+    display: inline;
+    margin: 0 0.5rem 0 0;
+}
+
+.card-noticia.horizontal .titulo-pequeno {
+    display: inline;
+}
+
+.card-noticia h1,
+.card-noticia h2,
+.card-noticia h3,
+.card-noticia h4 {
+    margin: 0;
+    color: var(--cor-texto-primaria);
+}
+
+.card-noticia p {
+    margin: 0;
+}
+
+.categoria-noticia {
+    display: block;
+    margin-bottom: 0.5em;
+    font-family: var(--fonte-interface);
+    font-weight: 700;
+    font-size: 0.75rem;
+    line-height: 0.75rem;
+    color: var(--cor-secundaria);
+}
+
+.card-noticia.principal p {
+    margin: 0.75rem 0 1rem 0;
+    color: var(--cor-texto-secundaria);
+    font-weight: 500;
+}
+
+.titulo-destaque {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 2rem;
+    position: relative;
+    padding-left: 1.2rem;
+}
+
+.titulo-destaque::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0.5rem;
+    height: 100%;
+    background-color: var(--cor-secundaria);
+    border-radius: 1rem;
+}
+
+.titulo-medio {
+    font-size: 1rem;
+    line-height: 1rem;
+    font-weight: 600;
+}
+
+.titulo-grande {
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+    position: relative;
+    align-self: flex-start;
+}
+
+.titulo-grande.com-barra {
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+    position: relative;
+    padding-left: 1rem;
+    align-self: flex-start;
+}
+
+.card-noticia.padrao .titulo-grande.com-barra::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0.5rem;
+    height: 100%;
+    background-color: var(--cor-secundaria);
+    border-radius: 1rem;
+}
+
+.titulo-pequeno {
+    font-size: 0.9rem;
+    line-height: 1rem;
+    font-weight: 700;
+}
+
+.destaques-direita .lista-noticias .card-noticia:first-child {
+    padding: 1rem 0 0.25rem;
+}
+
+.destaques-direita .lista-noticias .card-noticia:last-child {
+    padding-top: 0.25rem;
+}
+
+.card-noticia.colorido .conteudo-card {
+    background-color: var(--cor-secundaria);
+    padding: 0.75rem 1rem 1rem;
+}
+
+.card-noticia.colorido .categoria-noticia {
+    color: white;
+}
+
+.banner {
+    background-color: #f4f4f4;
+    margin: 1.5rem 0;
+}
+
+.banner-conteudo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-conteudo > img {
+    max-width: 60%;
+    height: auto;
+}
+
+.recentes .container {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 2rem;
+}
+
+.lista-noticias-em-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+}
+
+.card-noticia.padrao > p {
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1rem;
+    padding: 0.5rem 0 0 1rem;
+}
+
+.categoria-secao-lateral {
+    display: block;
+    margin: 0 0 0.875rem;
+    font-family: var(--fonte-interface);
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 0.75rem;
+    color: var(--cor-secundaria);
+}
+
+.newsletter .categoria-secao-lateral {
+    color: var(--cor-texto-secundaria);
+}
+
+.titulo-secao-lateral {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 2rem;
+    position: relative;
+    padding-left: 1.2rem;
+    margin: 0 auto;
+}
+
+.titulo-secao-lateral::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0.5rem;
+    height: 100%;
+    background-color: var(--cor-secundaria);
+    border-radius: 1rem;
+}
+
+.descricao-secao-lateral {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--cor-texto-secundaria); 
+    line-height: 1rem;
+    padding: 0.875rem 0 0.87rem 1.2rem;
+    margin: 0 auto;
+}
+
+.aviso-formulario {
+    font-family: var(--fonte-interface);
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--cor-texto-secundaria);
+    line-height: 0.75rem;
+    padding: 0.5rem 0 0.5rem 1.2rem;
+    margin: 0 auto;
+}
+
+.secao-lateral form {
+    display: flex;
+    width: 100%;
+    gap: 0.4rem;
+    padding-left: 1.2rem;
+    margin-top: 0.25rem;
+}
+
+.secao-lateral form input {
+    flex: 1;
+    min-width: 0;
+}
+
+.secao-lateral form button {
+    flex-shrink: 0;
+}
+
+.categoria-secao-lateral.com-divisoria-espessa {
+    border-bottom: 2px solid var(--cor-secundaria);
+    padding-bottom: 0.75rem;
+    margin-bottom: 1rem;
+}
